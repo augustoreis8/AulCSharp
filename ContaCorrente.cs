@@ -12,7 +12,6 @@ public class ContaCorrente
         this.Numero = Numero;
         this.Saldo = Saldo;
     }
-
     public bool Sacar(double ValorSaque)
     {
         if (this.Saldo >= ValorSaque)
@@ -21,5 +20,10 @@ public class ContaCorrente
             return true;
         }
         return false;
+    }
+    public bool Depositar(double ValorDeposito)
+    {
+        this.Saldo = this.Saldo + ValorDeposito;
+        return true;
     }
 }
